@@ -1,0 +1,14 @@
+{
+  "title": "Gas Pump Hero",
+  "description": "How good can you pump?",
+  "url": "https://russellgoldenberg.github.io/gas-pump-hero/",
+  "keywords": "gas, pump, game",
+  "imgFacebook": "https://russellgoldenberg.github.io/gas-pump-hero/assets/social/social-facebook.jpg",
+  "imgTwitter": "https://russellgoldenberg.github.io/gas-pump-hero/assets/social/social-twitter.jpg",
+  "author": {
+    "name": "Russell Goldenberg",
+    "url": "https://twitter.com/codenberg",
+    "twitterHandle": "@codenberg"
+  },
+  "analytics": ""
+}
