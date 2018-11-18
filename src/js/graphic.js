@@ -21,7 +21,7 @@ const levelData = [
 	{ ratio: 30, target: '42.07' }
 ];
 
-let level = 7;
+let level = -1;
 let attempts = 0;
 
 function resize() {}
