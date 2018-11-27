@@ -73,7 +73,7 @@ function handleStop() {
 		next();
 	} else {
 		const formatted = formatMoney(delta);
-		$result.text(`Off by ${formatted}. Try again.`);
+		$result.text(`Off by $${formatted}. Try again.`);
 	}
 }
 
