@@ -3,22 +3,36 @@ const $section = d3.select('#pump');
 const $target = $section.select('.target');
 const $money = $section.select('.money');
 const $result = $section.select('.result');
+const $level = $section.select('.level');
 
 let pumping = false;
 let timePrev = null;
 let timeElapsed = 0;
 let moneyPumped = 0;
+// const levelData = [
+// 	{ ratio: 150, target: '00.50' },
+// 	{ ratio: 150, target: '01.00' },
+// 	{ ratio: 120, target: '02.00' },
+// 	{ ratio: 120, target: '04.00' },
+// 	{ ratio: 90, target: '02.50' },
+// 	{ ratio: 90, target: '06.00' },
+// 	{ ratio: 60, target: '05.00' },
+// 	{ ratio: 60, target: '9.98' },
+// 	{ ratio: 30, target: '10.00' },
+// 	{ ratio: 30, target: '42.07' }
+// ];
+
 const levelData = [
-	{ ratio: 150, target: '00.50' },
-	{ ratio: 150, target: '01.00' },
-	{ ratio: 120, target: '02.00' },
-	{ ratio: 120, target: '04.00' },
-	{ ratio: 90, target: '02.50' },
-	{ ratio: 90, target: '06.00' },
-	{ ratio: 60, target: '05.00' },
-	{ ratio: 60, target: '9.98' },
-	{ ratio: 30, target: '10.00' },
-	{ ratio: 30, target: '42.07' }
+	{ ratio: 150, target: '00.25' },
+	// { ratio: 150, target: '01.00' },
+	{ ratio: 120, target: '00.50' },
+	// { ratio: 120, target: '04.00' },
+	{ ratio: 90, target: '00.50' },
+	// { ratio: 90, target: '06.00' },
+	{ ratio: 60, target: '01.00' },
+	// { ratio: 60, target: '9.98' },
+	{ ratio: 30, target: '01.00' }
+	// { ratio: 30, target: '42.07' }
 ];
 
 let level = -1;
@@ -41,6 +55,7 @@ function next() {
 	moneyPumped = 0;
 	const formatted = formatMoney(levelData[level].target);
 	$target.text(`Pump exactly $${formatted} of gas.`);
+	$level.text(`Level ${level}`)
 }
 
 function tick() {
