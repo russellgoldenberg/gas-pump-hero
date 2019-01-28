@@ -84,7 +84,7 @@ function handleStop() {
 	console.log(+moneyPumped, +levelData[level].target);
 	const delta = Math.abs(+moneyPumped - +levelData[level].target);
 	if (delta === 0) {
-		$result.text(`You passed level ${level + 1} in ${attempts} attempts.`);
+		$result.text(`You passed level ${level} in ${attempts} attempts.`);
 		next();
 	} else {
 		const formatted = formatMoney(delta);
